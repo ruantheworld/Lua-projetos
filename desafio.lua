@@ -83,6 +83,7 @@ os.execute("chcp 65001")
     -- Inicio do combate
     while player.attributes.health > 0 and monster.attributes.health > 0 do
         displayBattle(player, monster)
+        os.execute("timeout 1 >nul")
 
         attack(player, monster)
         if monster.attributes.health <= 0 then
